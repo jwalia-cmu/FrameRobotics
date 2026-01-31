@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaaS robotics</title>
+    <meta name="description" content="Teleoperation infrastructure for robotics teams." />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+
+  <body>
+    <div class="bg" aria-hidden="true">
+      <video id="videoA" class="bg__video is-active" muted playsinline autoplay loop preload="metadata"></video>
+      <video id="videoB" class="bg__video" muted playsinline autoplay loop preload="metadata"></video>
+      <div class="bg__overlay"></div>
+      <div class="bg__noise"></div>
+    </div>
+
+    <main>
+      <section class="hero">
+        <div class="hero__inner">
+          <div class="brandbar" aria-label="Dextral Robotics">
+            <img class="brandbar__logo" src="/logo.svg" alt="" />
+            <div class="brandbar__name">Dextral Robotics</div>
+          </div>
+          <h1 class="hero__title">Teleoperation Infra for</h1>
+          <div class="hero__typing" aria-label="Rotating domains">
+            <span id="typingTarget"></span><span class="caret" aria-hidden="true"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="mid">
+        <div class="mid__hero">
+          <h2 class="mid__title">If you have robots, we enable speed, accuracy, and efficiency.</h2>
+        </div>
+
+        <div class="mid__inner">
+
+          <div class="cards" role="list">
+            <div class="card" role="listitem">
+              <div class="card__title">Multi-camera streaming for real operators</div>
+              <div class="card__desc">Consistent quality under real networks, with operator-first UX.</div>
+            </div>
+            <div class="card" role="listitem">
+              <div class="card__title">Control routing + permissions</div>
+              <div class="card__desc">Input devices, sessions, and access control in one place.</div>
+            </div>
+            <div class="card" role="listitem">
+              <div class="card__title">Safety gates + kill switch</div>
+              <div class="card__desc">Built-in limits and stop mechanisms you can trust.</div>
+            </div>
+            <div class="card" role="listitem">
+              <div class="card__title">Synchronized recording + export</div>
+              <div class="card__desc">Video and telemetry together for debugging, training, and audit.</div>
+            </div>
+          </div>
+
+          <p class="mid__copy">We take care of your end-to-end teleop so you can focus on scaling.</p>
+
+          <div class="people" aria-label="Team">
+            <article class="person">
+              <img class="person__photo" src="https://i.pravatar.cc/160?img=12" alt="Portrait placeholder" />
+              <div class="person__meta">
+                <div class="person__name">Karan Walia</div>
+                <div class="person__line">Robotics + systems. Building reliable remote ops.</div>
+                <a class="person__link" href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+              </div>
+            </article>
+            <article class="person">
+              <img class="person__photo" src="https://i.pravatar.cc/160?img=32" alt="Portrait placeholder" />
+              <div class="person__meta">
+                <div class="person__name">Co-founder</div>
+                <div class="person__line">Product + deployment. Shipping robots into the real world.</div>
+                <a class="person__link" href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="contact">
+            <div class="contact__text">Need a demo? Email us.</div>
+            <a class="contact__email" href="mailto:karanwalia@cmu.edu">karanwalia@cmu.edu</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__inner">
+          <div>© <span id="year"></span> TaaS robotics</div>
+          <div class="footer__muted">Teleoperation infrastructure</div>
+        </div>
+      </footer>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
