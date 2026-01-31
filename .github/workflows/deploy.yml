@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
@@ -23,9 +23,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
 
-      - run: npm install
-      - run: npm run build
+      - name: Force public npm registry
+        run: npm config set registry https://registry.npmjs.org
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build
+        run: npm run build
 
       - uses: actions/upload-pages-artifact@v3
         with:
