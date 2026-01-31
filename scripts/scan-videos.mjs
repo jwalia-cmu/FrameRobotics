@@ -17,7 +17,7 @@ const files = fs
   .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
 
 const manifest = {
-  videos: files.map((f) => `/videos/${f}`),
+  videos: files.map((f) => `videos/${f}`),
 };
 
 const outPath = path.join(dir, "manifest.json");

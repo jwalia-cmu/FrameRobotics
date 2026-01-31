@@ -56,7 +56,11 @@ function setupFounders() {
     const line = card.querySelector(".person__line");
     const link = card.querySelector(".person__link") as HTMLAnchorElement | null;
 
-    if (img) img.src = cfg.photo;
+    if (img) {
+      const base = (import.meta as any).env?.BASE_URL ?? "/";
+      const p = cfg.photo;
+      img.src = /^https?:\/\//i.test(p) ? p : `${base}${p.replace(/^\//, "")}`;
+    }
     setText(name, cfg.name);
     setText(line, cfg.line);
     if (link) link.href = cfg.linkedin;

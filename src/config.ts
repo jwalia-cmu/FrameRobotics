@@ -19,13 +19,13 @@ export const FOUNDERS = [
     name: "Jaskaran (Karan) Walia",
     line: "Machine Learning@CMU, Ex-Microsoft, Ex-MIT, 20+ papers, 80+ Citations, published in CVPR, CHI, Springer, ASE",
     linkedin: "https://www.linkedin.com/in/jaskaranwalia",
-    photo: "public/jaskaran_pic.png",
+    photo: "jaskaran_pic.png",
   },
   {
     name: "Shreenabh Agrawal",
     line: "Robotics@CMU, worked across quadrupeds, arms, humanoids, drones, published in (ICRA/IROS/RA-L)",
     linkedin: "https://www.linkedin.com/in/shreenabh",
-    photo: "public/shreenabh_pic.png",
+    photo: "shreenabh_pic.png",
   },
 ] as const;
 
@@ -36,7 +36,7 @@ export const HERO = {
 };
 
 export const VIDEO = {
-  manifestUrl: "/videos/manifest.json",
+  manifestUrl: "videos/manifest.json",
   // Cross-fade cadence. Keep this shorter than your typical clip length.
   swapEveryMs: 9000,
   fadeMs: 1100,
