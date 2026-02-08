@@ -1,5 +1,5 @@
 export const SITE = {
-  brand: "Frame Robotics",
+  brand: "Phi Robotics",
   email: "karanwalia@cmu.edu",
 };
 
